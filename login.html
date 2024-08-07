@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="offlines/bootstrap.min.css">
+    <link rel="stylesheet" href="offlines/tabler-icons/webfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="offlines/fontawesome-free-6.4.2-web/css/all.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsiveness.css">
+    <link rel="icon" href="images/single.png">
+    
+</head>
+<body>
+
+<div class="overflow-x-hidden">
+     
+     <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+               <a class="navbar-brand" href="#" style="width: 15%;">
+               <img src="images/multiple2.png" alt="" class="img-fluid">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ms-auto align-items-center gap-4 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                         <a class="nav-link px-2 text-light" href="index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link px-2 text-light" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link px-2 text-light" href="contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link active px-4" href="applicationform">Apply</a>
+                    </li>
+               </ul>
+               </div>
+          </div>
+     </nav>
+
+     <section class="R-herosection py-5">
+          <div class="container pt-5">
+               <div class="row d-flex align-items-center justify-content-center">
+               <div class="col-12 h-100">
+                    <div class="card bg-transparent text-light">
+                         <h1 class="fw-bold">Login</h1>
+                         <p class="fs-5 d-flex gap-2"><a class="nav-link" href="index">Home</a> / <a class="nav-link" href="#">Login</a></p>
+                    </div>
+               </div>
+               </div>
+          </div>
+     </section>
+
+     <section class="login py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6 d-lg-block d-none login-img">
+                    <img src="images/img3.jpg" alt="..." class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <form action="/api/v1/auth/login" method="post" class="applyform p-5" id="loginForm">
+                        <div class="col-12 mb-3">
+                            <h3>Login Details</h3>
+                        </div>
+                        <div class="col-12 d-flex flex-column gap-2 my-2">
+                            <label for="emailOrMatric">Email</label>
+                            <input type="text" class="form-control" required id="emailOrMatric" name="emailOrMatric" autocomplete="email">
+                       </div>
+                        <div class="col-12 d-flex flex-column gap-2 my-2">
+                            <label for="password">Input Password</label>
+                            <input type="password" class="form-control" required id="password" name="password" autocomplete="current-password">
+                       </div>
+                       <button type="submit" class="btn mt-3 herobtn" style="background: var(--deepsy); color: var(--deeper);">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <div id="alerting">
+          <!-- <div class="alert alert-success d-flex gap-2 align-items-center" role="alert">
+               <i class="ti ti-check fa-2x"></i>
+               <div>${msg || 'Login Successful'}</div>
+          </div>
+          <div class="alert alert-warning d-flex gap-2 align-items-center" role="alert">
+               <i class="ti ti-exclamation-circle fa-2x"></i>
+               <div>${msg || 'Incorrect Credentials'}</div>
+          </div>
+          <div class="alert alert-danger d-flex gap-2 align-items-center" role="alert">
+               <i class="ti ti-mood-wrrr fa-2x"></i>
+               <div>Login failed: ${error.response.data.msg}</div>
+          </div> -->
+     </div>
+</div>
+    
+    <script src="offlines/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+     document.querySelector('#loginForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const emailOrMatric = document.querySelector('#emailOrMatric').value;
+          const password = document.querySelector('#password').value;
+
+         
+          axios.post('/api/v1/auth/login', { emailOrMatric, password })
+          .then(function (response) {
+               const { success, msg, token, redirectUrl, userId, role } = response.data;
+               if (success) {
+                    localStorage.setItem('token', token);
+                    localStorage.setItem('userId', response.data.user.userId);
+                    localStorage.setItem('role', response.data.user.role);
+                    // Show success message
+                    alerting.innerHTML = `
+                    <div class="alert alert-success d-flex gap-2 align-items-center" role="alert">
+                         <i class="ti ti-check fa-2x"></i>
+                         <div>${msg || 'Login Successful'}</div>
+                    </div>`;
+                    setTimeout(() => {
+                         alerting.innerHTML = "";
+                         window.location.href = redirectUrl; // Redirect to the specified URL
+                    }, 2000); // Clear alert after 5 seconds
+               } else {
+                    // Show error message
+                    alerting.innerHTML = `
+                    <div class="alert alert-warning d-flex gap-2 align-items-center" role="alert">
+                         <i class="ti ti-exclamation-circle fa-2x"></i>
+                         <div>${msg}</div>
+                    </div>`;
+                    setTimeout(() => {
+                         alerting.innerHTML = "";
+                    }, 5000); // Clear alert after 5 seconds
+               }
+          })
+          .catch(function (error) {
+               console.log('Login failed:', error.response.data);
+               alerting.innerHTML = `
+               <div class="alert alert-danger d-flex gap-2 align-items-center" role="alert">
+                    <i class="ti ti-mood-wrrr fa-2x"></i>
+                    <div>Login failed: ${error.response.data.msg}</div>
+               </div>`;
+               setTimeout(() => {
+                    alerting.innerHTML = "";
+               }, 5000); // Clear alert after 5 seconds
+          });
+
+      });
+</script>
+</body>
+</html>
