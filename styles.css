@@ -109,6 +109,15 @@
 .campinfo h6{
     font-size: 14px;
 }
+.campinfo .card-img{
+    border: 10px solid #121923;
+    overflow: hidden;
+    height: 360px;
+}
+.campinfo .card-img:hover img{
+    transform: scale(1.08);
+    transition:.2s;
+}
 .campinfo::before{
     position: absolute;
     top: 40%;
@@ -229,7 +238,7 @@
     box-shadow: 10px 10px 10px #7979795c;
 }
 .gallery .gallery-img{
-    border: 1px solid var(--deepsy);
+    /* border: 1px solid var(--deepsy); */
     text-align: center !important;
     opacity: 0.7;
     cursor: pointer;
@@ -238,7 +247,7 @@
     cursor: zoom-in;
     width: 25%;
     object-fit: cover;
-    border: 1px solid var(--deepsy);
+    /* border: 1px solid var(--deepsy); */
 }
 .modal.fade{
     width: 100vw !important;
@@ -259,7 +268,7 @@
 }
 .newsletter .subscribe{
     border-radius: 5px;
-    background: linear-gradient(135deg, #F9D6896a, #F9D6898a), url(images/img11.jpg);
+    background: linear-gradient(135deg, #362809b1, #362809b9), url(images/img11.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -298,8 +307,41 @@ footer .nav-link:hover{
     display: flex;
     place-items: center;
 }
+.campus-hero{
+    background: url(https://templates.hibootstrap.com/sanu/default/assets/images/banner/banner-img3.jpg);
+    background-position: center;
+    background-size: cover;
+}
 .R-herosection .card{
     border: none;
+}
+.recreational .card{
+    height: 250px !important;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.recreational .fff{
+    height: 350px !important;
+}
+.recreational .card:hover img{
+    transform: scale(1.08);
+    transition: .2s;
+}
+.recreational .card .card-body{
+    width: 100%;
+    height: 100%;
+    background: #00000079;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    .card-title{
+        font-size: 2rem;
+    }
 }
 .contact .contactcard{
     background: var(--deepsy);
@@ -335,10 +377,19 @@ footer .nav-link:hover{
 .about2{
     line-height: 25px;
 }
+.about2 ul li{
+    margin-bottom: 1rem;
+}
 .about2 .card-img1{
     float: left;
     clear: both;
     width: 50%;
+}
+.about2 .card-img1 img,
+.about2 .card-img2 img{
+    border: 5px solid var(--deepsy);
+    border-radius: 10px;
+    overflow: hidden;
 }
 .about2 .card-img2{
     float: right;
@@ -362,6 +413,20 @@ footer .nav-link:hover{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+.real-about{
+    .card-img{
+        border: 5px solid var(--deepsy);
+        border-radius: 10px;
+        overflow: hidden;
+        float: left;
+        width: 50%;
+    }
+    .card-body{
+        padding: 0px 2rem;
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 .faqs{
     padding: 2rem;
@@ -590,6 +655,24 @@ color: #004080;
 }
 .applyform .herobtn i{
     rotate: 45deg;
+}
+.misvis{
+    .misvis-card{
+        position: relative;
+        z-index: 2;
+        border: none;
+        h5{
+            position: absolute;
+            font-size: 6rem;
+            font-weight: 900;
+            -webkit-text-stroke: 1px var(--deepsy);
+            color: var(--deep);
+            right: -10%;
+            top: -10%;
+            z-index: -1;
+            opacity: 15%;
+        }
+    }
 }
 #alerting{
     position: fixed;
