@@ -312,6 +312,11 @@ footer .nav-link:hover{
     background-position: center;
     background-size: cover;
 }
+.undergrad-hero{
+    background: linear-gradient(207deg, #00000060, #0000009d), url(images/rearview-university-graduates-line-up-degree-award-university-graduation-ceremony-university-graduates-are-gathering-university-graduation-ceremony-crowd-graduates_201468-1158.jpg);
+    background-position: center;
+    background-size: cover;
+}
 .R-herosection .card{
     border: none;
 }
@@ -400,6 +405,35 @@ footer .nav-link:hover{
 .chancellor li{
     list-style: none;
     word-spacing: 3px;
+}
+.yyyy{
+    position: relative;
+    font-size: 20px;
+    ul,
+    .text{
+        width: 48%;
+    }
+}
+.yyyy::after{
+    content: "Our Affilates";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    line-height: 7rem;
+    border: 1px solid red;
+    font-size: 8rem;
+    font-weight: 900;
+    -webkit-text-stroke: 1px var(--deepsy);
+    color: var(--deep);
+    z-index: -1;
+    opacity: 15%;
+
+}
+.text::first-letter{
+    color: var(--deepsy) !important;
+    font-size: 2rem;
+    font-weight: 900;
 }
 .about2 li::before,
 .chancellor li::before{
@@ -672,6 +706,63 @@ color: #004080;
             z-index: -1;
             opacity: 15%;
         }
+    }
+}
+.undergrad{
+    .btn-row{
+        display: flex;
+        width: 100%;
+        background: var(--deep);
+        button{
+            white-space: nowrap;
+            width: 100%;
+            height: 60px;
+            border-radius: 0px;
+            background: transparent;
+            border: none;
+        }
+        .active,
+        button:focus{
+            background: var(--deeper);
+            transition: .5s;
+            position: relative;
+            font-weight: 900;
+            z-index: 1;
+            box-shadow: inset -3px -3px 5px var(--deepest);
+        }
+        .active::first-letter,
+        button:focus::first-letter{
+            color: var(--deepsy) !important;
+            font-size: 1.5rem !important;
+        }
+        .active::after, 
+        button:focus::after{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0% !important;
+            border-bottom: 60px solid transparent;
+            border-left: 30px solid var(--deep);
+            z-index: -1;
+        }
+        .active::before, 
+        button:focus::before{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0% !important;
+            border-top: 60px solid transparent;
+            /* border-bottom: 60px solid transparent; */
+            border-right: 30px solid var(--deep);
+        }
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
     }
 }
 #alerting{
