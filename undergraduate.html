@@ -65,15 +65,15 @@
                 <div class="row">
                     <div class="col-12 my-3 mb-5">
                         <div class="btn-row">
-                            <button class="btn">Undergraduate Study</button>
-                            <button class="btn">Postgraduate Study</button>
-                            <button class="btn">Open Distance Learning</button>
-                            <button class="btn">Pre Degree Program</button>
-                            <button class="btn">JUPEB Program</button>
-                            <button class="btn">Part Time Programs</button>
+                            <a href="#undergradStudy" class="btn">Undergraduate Study</a>
+                            <a href="#postGradStudy" class="btn">Postgraduate Study</a>
+                            <a href="#oDlearningStudy" class="btn">Open Distance Learning</a>
+                            <a href="#preDegStudy" class="btn">Pre Degree Program</a>
+                            <a href="#jupebStudy" class="btn">JUPEB Program</a>
+                            <a href="#partTimeStudy" class="btn">Part Time Programs</a>
                         </div>
                     </div>
-                    <div class="col-10 my-3" id="undergradStudy">
+                    <div class="col-10 my-3 section" id="undergradStudy">
                         <div class="card bg-transparent border-0">
                             <p>The University maintains students' admission into the bachelor's degree programmes according to the approved guidelines and processes. For the bachelor's degree, applicants are admitted through the Unified Tertiary Matriculation Examination (UTME), Pre-Degree Science (PDS) programme, Direct Entry (DE) and Inter-University Transfer (IUT).
                             <br><br>
@@ -192,7 +192,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-10 my-3" id="postGradStudy">
+                    <div class="col-10 my-3 section" id="postGradStudy">
                         <div class="card">
                             <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>LAUTECH offers Postgraduate programmes comprising: postgraduate diploma, professional and academic degree programmes.</p>
 
@@ -230,7 +230,7 @@
                                 </ul></div>
                         </div>
                     </div>
-                    <div class="col-10 my-3" id="oDlearningStudy">
+                    <div class="col-10 my-3 section" id="oDlearningStudy">
                         <div class="card">
                             <div class="field field--name-field-block-builder field--type-blockbuilder field--label-hidden field__item">
 
@@ -385,17 +385,17 @@
                                 </div>
                         </div>
                     </div>
-                    <div class="col-10 my-3" id="preDegStudy">
+                    <div class="col-10 my-3 section" id="preDegStudy">
                         <div class="card">
 
                         </div>
                     </div>
-                    <div class="col-10 my-3" id="jupebStudy">
+                    <div class="col-10 my-3 section" id="jupebStudy">
                         <div class="card">
 
                         </div>
                     </div>
-                    <div class="col-10 my-3" id="partTimeStudy">
+                    <div class="col-10 my-3 section" id="partTimeStudy">
                         <div class="card">
 
                         </div>
@@ -548,5 +548,45 @@
     <script src="offlines/bootstrap.bundle.min.js"></script>
     <script src="offlines/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+          const allLinks = document.querySelectorAll(".btn-row a");
+          const sections = document.querySelectorAll(".section");
+     
+          // Initially hide all sections
+          sections.forEach((section) => {
+               section.style.display = "none";
+          });
+     
+          allLinks.forEach((link) => {
+               link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1); // Get the target ID without the '#'
+     
+                    // Hide all sections
+                    sections.forEach((section) => {
+                         section.style.display = "none";
+                    });
+     
+                    // Show the target section
+                    document.getElementById(targetId).style.display = "block";
+     
+                    // Remove 'active' class from all links
+                    allLinks.forEach((link) => {
+                         link.classList.remove("active");
+                    });
+     
+                    // Add 'active' class to the clicked link
+                    link.classList.add("active");
+               });
+          });
+     
+          // Optionally, show the first section by default
+          if (sections.length > 0) {
+               sections[0].style.display = "block";
+               allLinks[0].classList.add("active");
+          }
+     });
+    </script>
 </body>
 </html>
