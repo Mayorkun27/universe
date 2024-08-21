@@ -1,52 +1,39 @@
 @media (min-width:200px) and (max-width:991px) {
-    body #side{
-        position: absolute !important;
-        height: 91vh;
-        z-index: 20;
-        left: 0;
-        width: 50vw !important;
+    .programs{
+        .btn-row{
+            gap: 1rem;
+        }
+        .w-75{
+            width: 100% !important;
+        }
     }
-    body.collapsed #side{
-        width: 8vw !important;
-        left: -7% !important;
+    .yyyy{
+        ul,
+        .text{
+            width: 100%;
+        }
     }
-    body.collapsed #side .expand-btn{
-        right: -3rem;
-        width: 3.25rem;
-        height: 3.25rem;
-        animation: scale 1s ease 0s infinite alternate-reverse;
+    .yyyy::after{
+        bottom: -5rem;
+        width: 100%;
+        font-size: 3.2rem;
+        opacity: 20% !important;
+    
     }
-    body.collapsed #side .expand-btn i{
-        transform: rotate(0deg);
-        font-size: 1.5rem;
+    .text::first-letter{
+        color: var(--deepsy) !important;
+        font-size: 2rem;
+        font-weight: 900;
     }
-    body.collapsed #side .expand-btn i::before{     
-        content: "\f0c9" !important;
-    }
-    #main{
-        width: 100vw !important;
-    }
-    #main .profile-cover-img-wrapper{
-        position: relative;
-    }
-    #main .profile-cover-img-wrapper .profile-cover-img{
-         height: 20vh !important;;
-    }
-   .forms{
-        width: 105% !important;
-   }
-   .decidess, .decide{
-          display: flex !important;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center;
-          gap: 1.5rem;
-     }
 }
 
 @media (min-width:200px) and (max-width:767px) {
     .herosection{
         height: 100vh !important;
+    }
+    .btn-row{
+        /* padding: .5rem; */
+        gap: 1rem;
     }
     .applyform{
         font-size: 12px;
@@ -103,26 +90,11 @@
         max-width: auto;
         border-radius: 10px;
     }
-    body #side{
-        position: absolute !important;
-        height: 97vh;
-        z-index: 20;
-        left: 0;
-        width: 50vw !important;
-    }
-    .sidebar{
-        box-shadow: 3px 0px 10px var(--deepsy);
-    }
-    .logo_wrapper{
-        height: 4rem !important;
-    }
-    #side .logo-small1{
-        display: block;
-        width: 30% !important;
-    }
-    .general .forms .decidess{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr) !important;
+    .yyyy::after{
+        bottom: -5rem;
+        width: 100%;
+        left: 10% !important;
+        font-size: 6.2rem;
     }
 }
 

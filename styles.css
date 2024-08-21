@@ -421,13 +421,12 @@ footer .nav-link:hover{
     left: 0;
     width: 50%;
     line-height: 7rem;
-    border: 1px solid red;
     font-size: 8rem;
     font-weight: 900;
     -webkit-text-stroke: 1px var(--deepsy);
     color: var(--deep);
     z-index: -1;
-    opacity: 15%;
+    opacity: 10%;
 
 }
 .text::first-letter{
@@ -505,6 +504,34 @@ footer .nav-link:hover{
 }
 .faq .accordion-header:hover{
     background-color: #e9ecef;
+}
+.progFaq .accordion-button{
+    color: var(--deepsy);
+    font-weight: 600;
+    border-radius: 10px !important;
+    box-shadow: 5px 5px 20px #d7d7d7;
+}
+.progFaq .accordion-body{
+    color: #000;
+}
+.progFaq .accordion-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    text-decoration: none !important;
+}
+.progFaq .accordion-header:hover{
+    background-color: #e9ecef;
+}
+.progFaq .accordion-button:not(.collapsed){
+    background: #cfe2ff18 !important;
 }
 .aboutstats{
     background: #eeeeee95;
@@ -708,56 +735,40 @@ color: #004080;
         }
     }
 }
-.undergrad{
+.programs{
     .btn-row{
         display: flex;
         width: 100%;
         background: var(--deep);
-        button{
+        border-radius: 10px;
+        overflow-x: scroll;
+        position: relative;
+        z-index: 3;
+        .button{
             white-space: nowrap;
             width: 100%;
             height: 60px;
             border-radius: 0px;
             background: transparent;
             border: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px .5rem;
         }
-        .active,
-        button:focus{
+        .activeState{
             background: var(--deeper);
             transition: .5s;
             position: relative;
+            border-radius: 10px;
             font-weight: 900;
             z-index: 1;
-            box-shadow: inset -3px -3px 5px var(--deepest);
+            box-shadow: inset -3px -3px 5px var(--deepest),
+            inset 3px 3px 5px var(--deepest);
         }
-        .active::first-letter,
-        button:focus::first-letter{
+        .activeState::first-letter{
             color: var(--deepsy) !important;
             font-size: 1.5rem !important;
-        }
-        .active::after, 
-        button:focus::after{
-            content: '';
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0% !important;
-            border-bottom: 60px solid transparent;
-            border-left: 30px solid var(--deep);
-            z-index: -1;
-        }
-        .active::before, 
-        button:focus::before{
-            content: '';
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            right: 0% !important;
-            border-top: 60px solid transparent;
-            /* border-bottom: 60px solid transparent; */
-            border-right: 30px solid var(--deep);
         }
     }
     a{
