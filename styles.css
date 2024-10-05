@@ -131,6 +131,9 @@
     cursor: pointer;
     box-shadow: 1px 1px 10px var(--deep);
 }
+.academicsbtn{
+    width: 50% !important;
+}
 .how .howcard:hover .number{
     transition: .8s;
     -webkit-text-stroke: 5px var(--deepest);
