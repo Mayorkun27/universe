@@ -43,6 +43,9 @@
     .herosection{
         height: 100vh !important;
     }
+    .academicsbtn{
+        width: 80% !important;
+    }
     .faqs{
         padding: 1rem !important;
     }
@@ -123,7 +126,7 @@
     }
     .academicsbtn,
     .howbtn{
-        width: 85% !important;
+        width: 70% !important;
     }
     .R-herosection{
         height: 30vh !important;
