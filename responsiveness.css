@@ -55,6 +55,7 @@
     .btn-row{
         gap: 1rem;
     }
+    .contactcard,
     .applyform{
         font-size: 12px;
         padding: 1.5rem !important;
