@@ -52,8 +52,8 @@
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-12 h-100">
                         <div class="card bg-transparent text-light border-0">
-                            <h1 class="fw-bold">Undergraduate Study</h1>
-                            <p class="fs-5 d-flex gap-2"><a class="nav-link" href="index.html#academics">Academics</a> / <a class="nav-link" href="#">Undergraduate study</a></p>
+                            <h1 class="fw-bold page-title">Undergraduate Study</h1>
+                            <p class="fs-5 d-flex gap-2"><a class="nav-link" href="index.html#academics">Academics</a> / <a class="nav-link page-link" href="#">Undergraduate study</a></p>
                         </div>
                     </div>
                 </div>
@@ -562,43 +562,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
     <script>
      document.addEventListener('DOMContentLoaded', function () {
-          const allLinks = document.querySelectorAll(".btn-row a");
-          const sections = document.querySelectorAll(".section");
-     
-          // Initially hide all sections
-          sections.forEach((section) => {
-               section.style.display = "none";
-          });
-     
-          allLinks.forEach((link) => {
-               link.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    const targetId = link.getAttribute('href').substring(1); // Get the target ID without the '#'
-     
-                    // Hide all sections
-                    sections.forEach((section) => {
-                         section.style.display = "none";
-                    });
-     
-                    // Show the target section
-                    document.getElementById(targetId).style.display = "block";
-     
-                    // Remove 'activeState' class from all links
-                    allLinks.forEach((link) => {
-                         link.classList.remove("activeState");
-                    });
-     
-                    // Add 'activeState' class to the clicked link
-                    link.classList.add("activeState");
-               });
-          });
-     
-          // Optionally, show the first section by default
-          if (sections.length > 0) {
-               sections[0].style.display = "block";
-               allLinks[0].classList.add("activeState");
-          }
-     });
+        const allLinks = document.querySelectorAll(".btn-row a");
+        const sections = document.querySelectorAll(".section");
+        const pageTitle = document.querySelector(".page-title"); // Select the page title
+        const pageLink = document.querySelector(".page-link"); // Select the page title
+
+        // Initially hide all sections
+        sections.forEach((section) => {
+            section.style.display = "none";
+        });
+
+        allLinks.forEach((link) => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1); // Get the target ID without the '#'
+
+                // Change the page title based on the clicked link
+                switch (targetId) {
+                    case "undergradStudy":
+                        pageTitle.innerHTML = "Undergraduate Study";
+                        pageLink.innerHTML = "Undergraduate Study";
+                        break;
+                    case "postGradStudy":
+                        pageTitle.innerHTML = "Postgraduate Study";
+                        pageLink.innerHTML = "Postgraduate Study";
+                        break;
+                    case "oDlearningStudy":
+                        pageTitle.innerHTML = "Open Distance Learning";
+                        pageLink.innerHTML = "Open Distance Learning";
+                        break;
+                    case "preDegStudy":
+                        pageTitle.innerHTML = "Pre Degree Program";
+                        pageLink.innerHTML = "Pre Degree Program";
+                        break;
+                    case "jupebStudy":
+                        pageTitle.innerHTML = "JUPEB Program";
+                        pageLink.innerHTML = "JUPEB Program";
+                        break;
+                    case "partTimeStudy":
+                        pageTitle.innerHTML = "Part Time Programs";
+                        pageLink.innerHTML = "Part Time Programs";
+                        break;
+                    default:
+                        break;
+                }
+
+                // Hide all sections
+                sections.forEach((section) => {
+                    section.style.display = "none";
+                });
+
+                // Show the target section
+                document.getElementById(targetId).style.display = "block";
+
+                // Remove 'activeState' class from all links
+                allLinks.forEach((link) => {
+                    link.classList.remove("activeState");
+                });
+
+                // Add 'activeState' class to the clicked link
+                link.classList.add("activeState");
+            });
+        });
+
+        // Optionally, show the first section by default
+        if (sections.length > 0) {
+            sections[0].style.display = "block";
+            allLinks[0].classList.add("activeState");
+        }
+    });
+
     </script>
 </body>
 </html>

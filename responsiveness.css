@@ -1,21 +1,30 @@
 @media (min-width:200px) and (max-width:991px) {
-    .programs{
-        .btn-row{
-            gap: 1rem;
-        }
-        .w-75{
-            width: 100% !important;
-        }
+    .programs .btn-row{
+        gap: 1rem;
     }
-    .yyyy{
-        ul,
-        .text{
-            width: 100%;
-        }
+    .programs .btn-row .w-75{
+        width: 100% !important;
+    }
+    .real-about .card-body{
+        padding: 0px;
+    }
+    .yyyy ul,
+    .yyyy .text{
+        width: 100%;
+    }
+    .recreational .card{
+        height: 190px !important;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .recreational .fff{
+        height: 300px !important;
     }
     .yyyy::after{
         bottom: -5rem;
         width: 100%;
+        left: 5%;
+        rotate: 0deg;
         font-size: 3.2rem;
         opacity: 20% !important;
     
@@ -25,22 +34,38 @@
         font-size: 2rem;
         font-weight: 900;
     }
+    .real-about .card-img{
+        height: max-content;
+    }
 }
 
 @media (min-width:200px) and (max-width:767px) {
     .herosection{
         height: 100vh !important;
     }
+    .real-about .card-img{
+        width: 100%;
+    }
+    .real-about .card-body{
+        font-size: 16px;
+    }
     .btn-row{
-        /* padding: .5rem; */
         gap: 1rem;
     }
     .applyform{
         font-size: 12px;
     }
+    .statcard{
+        height: 100px;
+    }
+    .statcard h6{
+        margin-top: auto;
+        font-size: 12px;
+    }
     .R-herosection{
         height: 40vh !important;
     }
+    .alumni .herobtn,
     .aboutbtn{
         width: 65% !important;
     }
@@ -53,12 +78,25 @@
         max-width: auto;
         border-radius: 10px;
     }
-    .full-width-list{
-        width: 100% !important;
+    .testimonials .testicard::before,
+    .testimonials .testicard::after{
+        font-size: 4rem;
     }
-    .general .forms .decidess{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) !important;
+    .testimonials .testicard::after{
+        left: 5%;
+        top: 70%;
+    }
+    .testimonials .testicard::before{
+        top: 40%;
+    }
+    .gallery .gallery-img img{
+        width: 50%;
+        height: 100px;
+    }
+    .gallery .gallery-img .last-child{
+        width: 50%;
+        height: 100px;
+        font-size: 1rem;
     }
 }
 
@@ -74,6 +112,11 @@
     .filterBtn{
         width: 40% !important;
     }
+    .heading-p{
+        width: 85%;
+        margin-bottom: 2rem;
+    }
+    .academicsbtn,
     .howbtn{
         width: 70% !important;
     }
@@ -96,11 +139,32 @@
         left: 10% !important;
         font-size: 6.2rem;
     }
+    .gallery .gallery-img .last-child{
+        font-size: 1rem;
+        height: 150px;
+    }
+    .gallery .gallery-img img{
+        height: 150px;
+    }
+    .testimonials .testicard::before,
+    .testimonials .testicard::after{
+        font-size: 4rem;
+    }
+    .testimonials .testicard::after{
+        left: 90%;
+    }
 }
 
 @media (min-width:200px) and (max-width:475px) {
     .navbar-brand{
         width: 30% !important;
+    }
+    .campinfo .campinfocard{
+        width: 100%;
+    }
+    .heading-p{
+        width: 100%;
+        font-size: 14px;
     }
     .chancellor .card1{
         display: none;
@@ -164,5 +228,13 @@
     to {
          opacity: 1;
          width: 100%;
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 30%;
+    }
+    100%{
+        opacity: 100%;
     }
 }
