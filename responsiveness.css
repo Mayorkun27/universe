@@ -57,6 +57,7 @@
     }
     .applyform{
         font-size: 12px;
+        padding: 1.5rem !important;
     }
     .statcard{
         height: 100px;
