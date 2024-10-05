@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="responsiveness.css">
     <link rel="icon" href="images/single.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.css"/>
+
 </head>
 <body>
 
@@ -19,186 +20,137 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container d-flex flex-row">
                 <a class="navbar-brand" href="#" style="width: 15%;">
-                    <img src="images/multiple2.png" alt="" class="img-fluid" width="" height="20px">
+                    <img src="images/multiple2.png" alt="logo" class="img-fluid" width="" height="20px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" onclick="openAndClose()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto gap-4 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link px-2" aria-current="page" href="index">Home</a>
+                            <a class="nav-link px-2" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link px-2" href="index.html#academics">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-2 active" href="#">About</a>
+                            <a class="nav-link px-2 active" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="contact">Contact</a>
+                            <a class="nav-link px-2" href="contact.html">Contact</a>
                         </li>
                     </ul>
                     <div class="d-flex flex-row gap-3 align-items-center">
-                        <a href="login" class="btn" style="color: var(--deep) !important;">Login</a>
-                        <a href="applicationform" class="btn navbtn d-flex align-items-center gap-2 justify-content-center"><span>Apply Now</span> <i class="ti ti-arrow-right"></i></a>
+                        <a href="login.html" class="btn" style="color: var(--deepsy) !important;">Login</a>
+                        <a href="applicationform.html" class="btn navbtn d-flex align-items-center gap-2 justify-content-center"><span>Apply Now</span> <i class="ti ti-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </nav>
+        
 
         <section class="R-herosection py-5">
             <div class="container pt-5">
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-12 h-100">
-                        <div class="card bg-transparent text-light border-0">
-                            <h1 class="fw-bold">About Universe University</h1>
-                            <p class="fs-5 d-flex gap-2"><a class="nav-link" href="index">Home</a> / <a class="nav-link" href="#">About</a></p>
+                        <div class="card bg-transparent text-light text-center border-0">
+                            <h1 class="fw-bold">How to Apply to Universe University</h1>
+                            <p class="fs-5 d-flex justify-content-center gap-2"><a class="nav-link" href="index.html">Home</a> / <a class="nav-link" href="#">Blog</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <header>
-            <h1>How to Apply to Universe University</h1>
-        </header>
-
-        <article>
-            <section>
-                <h2>Introduction</h2>
-                <p>Applying to Universe University is an exciting step toward your academic future. With world-class facilities, a diverse community, and cutting-edge research opportunities, Universe University offers a wide range of programs tailored to your interests. This guide will walk you through the application process to ensure everything runs smoothly.</p>
-            </section>
-
-            <section>
-                <h2>Step 1: Research Programs</h2>
-                <p>Before starting your application, spend time researching the programs offered at Universe University. Whether you are interested in humanities, sciences, or business, our website offers comprehensive details on each course, including prerequisites, course content, and career opportunities.</p>
-            </section>
-
-            <section>
-                <h2>Step 2: Meet Admission Requirements</h2>
-                <p>Each program at Universe University has specific admission requirements. Make sure to check the academic qualifications, language proficiency (for international students), and any standardized test scores required for your desired program.</p>
-            </section>
-
-            <section>
-                <h2>Step 3: Prepare Your Documents</h2>
-                <p>Gather all the necessary documents, such as:</p>
-                <ul>
-                    <li>Academic transcripts</li>
-                    <li>Personal statement</li>
-                    <li>Letters of recommendation</li>
-                    <li>Proof of language proficiency</li>
-                    <li>Test scores (e.g., SAT, GRE, GMAT)</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Step 4: Submit Your Application</h2>
-                <p>Applications can be submitted through our online portal. Fill in all the required sections carefully, ensuring that all documents are uploaded. Double-check all information before hitting the "Submit" button.</p>
-            </section>
-
-            <section>
-                <h2>Step 5: Application Fee</h2>
-                <p>An application fee is required to process your application. This can be paid online through a secure payment gateway. Fee waivers are available for eligible students.</p>
-            </section>
-
-            <section>
-                <h2>Step 6: Await Response</h2>
-                <p>After submitting your application, you will receive an acknowledgment email. The admissions committee will review your application, and decisions are typically released within 6-8 weeks.</p>
-            </section>
-
-            <section>
-                <h2>Conclusion</h2>
-                <p>Applying to Universe University is a straightforward process, but careful attention to detail can make all the difference. Make sure to follow these steps closely, and you’ll be one step closer to becoming a part of the Universe University community!</p>
-            </section>
-        </article>
-
-        <footer>
-            <p>&copy; 2024 Universe University | <a href="index.html">Back to Homepage</a></p>
-        </footer>
-
-        <section class="newsletter py-5">
+        
+        <section class="blog py-4" style="font-size: 18px !important;">
             <div class="container">
-                <h2 class="mb-5">Academic News</h2>
-                <div class="row align-items-center">
-                    <div class="col-lg-8 col-12">
-                        <div class="row news">
-                            <div class="col-lg-6 col-md-6 my-3 col-12 mx-auto">
-                                <div class="card bg-transparent border-0 p-3">
-                                    <div class="card-img">
-                                        <img src="images/img21.jpg" alt="..." class="img-fluid">
-                                    </div>
-                                    <div class="card-text mt-3">
-                                        <h4>How to apply to universe</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos maiores excepturi quam reprehenderit fugiat mollitia architecto non animi. Accusantium, unde.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 my-3 col-12 mx-auto">
-                                <div class="card bg-transparent border-0 p-3">
-                                    <div class="card-img">
-                                        <img src="images/img21.jpg" alt="..." class="img-fluid">
-                                    </div>
-                                    <div class="card-text mt-3">
-                                        <h4>Institution Fee Update</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos maiores excepturi quam reprehenderit fugiat mollitia architecto non animi. Accusantium, unde.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 mx-auto d-none">
-                                <div class="card bg-transparent border-0 p-3">
-                                    <div class="card-img">
-                                        <img src="images/img21.jpg" alt="..." class="img-fluid">
-                                    </div>
-                                    <div class="card-text mt-3">
-                                        <h4>Introducing free counselling sessions</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos maiores excepturi quam reprehenderit fugiat mollitia architecto non animi. Accusantium, unde.</p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-12 my-3">
+                        <h2>Introduction</h2>
+                        <p>Applying to Universe University is an exciting step toward your academic future. With world-class facilities, a diverse community, and cutting-edge research opportunities, Universe University offers a wide range of programs tailored to your interests. This guide will walk you through the application process to ensure everything runs smoothly.</p>
+                    </div>
+                
+                    <div class="col-lg-4 my-3"> 
+                        <div class="card p-3">
+                            <h5>Step 1: Research Programs</h5>
+                            <p>Before starting your application, spend time researching the programs offered at Universe University. Whether you are interested in humanities, sciences, or business, our website offers comprehensive details on each course, including prerequisites, course content, and career opportunities.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 my-3 mx-auto">
-                        <div class="subscribe py-5 px-2 text-light gap-3">
-                            <i class="ti ti-mail fs-1"></i>
-                            <div class="sub-text text-center">
-                                <h4 class="m-0">Subscribe To Newsletter</h4>
-                                <p class="m-0">Get updates to news & events</p>
-                            </div>
-                            <form action="index" class="w-100 text-center d-flex flex-column justify-content-center align-items-center gap-2">
-                                <input type="email" placeholder="Your Email" class="form-control">
-                                <button type="submit" class="btn formbtn">Subscribe</button>
-                            </form>
+                
+                    <div class="col-lg-4 my-3"> 
+                        <div class="card p-3">
+                            <h5>Step 2: Meet Admission Requirements</h5>
+                            <p>Each program at Universe University has specific admission requirements. Make sure to check the academic qualifications, language proficiency (for international students), and any standardized test scores required for your desired program.</p>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 my-3"> 
+                        <div class="card p-3">
+                            <h5>Step 3: Prepare Your Documents</h5>
+                            <p>Gather all the necessary documents, such as:</p>
+                            <ul>
+                                <li>Academic transcripts</li>
+                                <li>Personal statement</li>
+                                <li>Letters of recommendation</li>
+                                <li>Proof of language proficiency</li>
+                                <li>Test scores (e.g., SAT, GRE, GMAT)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-3"> 
+                        <div class="card p-3">
+                            <h5>Step 4: Submit Your Application</h5>
+                            <p>Applications can be submitted through our online portal. Fill in all the required sections carefully, ensuring that all documents are uploaded. Double-check all information before hitting the "Submit" button.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-3"> 
+                        <div class="card p-3">
+                            <h5>Step 5: Application Fee</h5>
+                            <p>An application fee is required to process your application. This can be paid online through a secure payment gateway. Fee waivers are available for eligible students.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-3"> 
+                        <div class="card p-3">
+                            <h5>Step 6: Await Response</h5>
+                            <p>After submitting your application, you will receive an acknowledgment email. The admissions committee will review your application, and decisions are typically released within 6-8 weeks.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 my-3">
+                        <h2>Conclusion</h2>
+                        <p>Applying to Universe University is a straightforward process, but careful attention to detail can make all the difference. Make sure to follow these steps closely, and you’ll be one step closer to becoming a part of the Universe University community!</p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <footer class="pt-5 pb-3">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 mt-3">
-                        <img src="images/multiple2.png" alt="..." class="img-fluid w-75">
+                        <img src="images/multiple2.png" alt="..." class="img-fluid w-50">
                         <p class="m-0 my-3">Universe University was established by O.A Serah in 2024 for the public benefit. Afterwards, it is recognized globally... Esthablished to provide world-class education, Universe is actively building the future.</p>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 mt-3">
                         <h4>Useful Links</h4>
                         <ul class="navbar-nav gap-2 mt-3">
-                            <li><a class="nav-link p-0" href="applicationform">Application</a></li>
-                            <li><a class="nav-link p-0" href="about#faq">FAQ</a></li>
-                            <li><a class="nav-link p-0" href="alumni">Alumni</a></li>
-                            <li><a class="nav-link p-0" href="#">Terms & conditions</a></li>
-                            <li><a class="nav-link p-0" href="#">Privacy policy</a></li>
+                            <li><a class="nav-link p-0" href="applicationform.html">Application</a></li>
+                            <li><a class="nav-link p-0" href="about.html#faq">FAQ</a></li>
+                            <li><a class="nav-link p-0" href="chancelloroffice.html">Office of the Chancellor</a></li>
+                            <li><a class="nav-link p-0" href="login.html">Login</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 mt-3">
                         <h4>Our Campus</h4>
                         <ul class="navbar-nav gap-2 mt-3">
-                            <li><a class="nav-link p-0" href="index#academics">Find a program</a></li>
-                            <li><a class="nav-link p-0" href="#">Admissions</a></li>
-                            <li><a class="nav-link p-0" href="chancelloroffice">Office of the Chancellor</a></li>
-                            <li><a class="nav-link p-0" href="applicationform">Study on campus</a></li>
+                            <li><a class="nav-link p-0" href="index.html#academics">Find a program</a></li>
+                            <li><a class="nav-link p-0" href="campuslife.html">Campus Life</a></li>
+                            <li><a class="nav-link p-0" href="alumni.html">Alumnis</a></li>
+                            <li><a class="nav-link p-0" href="affilate.html">Our Affilates</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-6 col-12 mt-3 text-center">
@@ -214,11 +166,11 @@
                     <div class="col-12 mt-3">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-lg-4 col-md-4 col-12 mt-3">
-                                <a class="nav-link" href="contact#contact">
+                                <a class="nav-link" href="contact.html#contact">
                                     <div class="d-flex flex-lg-row flex-md-row flex-column align-items-center gap-lg-2 gap-md-2 text-center text-lg-start text-md-start justify-content-center">
                                         <i class="ti ti-location-pin fs-3"></i>
                                         <div class="d-grid">
-                                            <span>Address</span>
+                                            <span>Location</span>
                                             <span>1312 Greg Street, Sparks. NV 88441</span>
                                         </div>
                                     </div>

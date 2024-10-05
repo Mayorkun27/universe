@@ -8,10 +8,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* opacity: 0% !important; */
 }
 ::-webkit-scrollbar{
     display: none;
+}
+.blog .card{
+    border: 3px solid var(--deepsy);
 }
 .nav-brand{
     border: none;
@@ -799,11 +801,9 @@ footer .nav-link:hover{
 }
 .programs .btn-row .activeState{
     background: var(--deeper);
-    border: solid var(--deepsy);
-    border-width: 0 2px 0 2px;
-    transition: .5s;
+    transition: 0.1s;
     position: relative;
-    font-weight: 900;
+    font-weight: 800;
     z-index: 1;
 }
 .programs .btn-row .activeState::first-letter{
